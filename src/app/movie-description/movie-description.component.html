@@ -1,0 +1,56 @@
+
+  <div class="modal-header">
+    <h4 class="modal-title pull-left">{{description.title}} ({{description.year}})</h4>
+    <button type="button" class="close pull-right" aria-label="Close" (click)="bsModalRef.hide()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="modal-body">
+    <p>{{description.synopsis}}</p>
+    <div class="disp">
+        <div>
+            <img src={{description.images.fanart}}>
+        </div>
+        <div class="ml-3">
+            <table>
+                <tr>
+                    <td><strong>Release</strong></td>
+                    <td></td>
+                    <td>{{date}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Certification</strong></td>
+                    <td></td>
+                    <td>{{description.certification}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Runtime</strong></td>
+                    <td></td>
+                    <td>{{description.runtime}}</td>
+                </tr>
+                <tr>
+                    <td><strong>Genres</strong></td>
+                </tr>
+                <tr>
+                    <td>
+                        <ul>
+                            <li *ngFor="let genre of description.genres">{{genre}}</li>
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <h5>Rating</h5>
+    <div>
+        <strong>Percentage - </strong> {{description.rating.percentage}}
+        <strong>Watching - </strong> {{description.rating.watching}}
+        <strong>Votes - </strong> {{description.rating.votes}}
+        <strong>Loved - </strong> {{description.rating.loved}}
+        <strong>Hated - </strong> {{description.rating.hated}}
+
+    </div>
+</div>
+<div class="modal-footer">
+  <button type="button" class="btn btn-primary" (click)="bsModalRef.hide()">Close</button>
+</div>
