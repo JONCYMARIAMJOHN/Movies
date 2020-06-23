@@ -25,9 +25,13 @@
             ],
             "styles": [
               "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "node_modules/plyr/dist/plyr.css",
               "src/styles.css"
+              
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/plyr/dist/plyr.js"
+            ]
           },
           "configurations": {
             "production": {

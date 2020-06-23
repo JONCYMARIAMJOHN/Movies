@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MovieDescriptionComponent } from './movie-description/movie-description.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { PlyrModule } from 'ngx-plyr';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ModalModule } from 'ngx-bootstrap/modal';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    PlyrModule
   ],
   providers: [],
   bootstrap: [AppComponent]

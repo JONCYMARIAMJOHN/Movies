@@ -9,7 +9,7 @@ export class MovieService {
   constructor(private httpClient: HttpClient) { }
 
   getDetails() {
-    const requestUrl = `https://tv-v2.api-fetch.website/movies/1`;
+    const requestUrl = `https://cors-anywhere.herokuapp.com/https://tv-v2.api-fetch.sh/movies/1?`;
     return this.httpClient.get(requestUrl);
   }
 }
